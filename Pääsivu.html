@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="javascript.js"></script>
+<title>Frogito</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+.container {position: relative;}
+
+.mySlides {display: none;}
+
+.cursor {cursor: pointer;}
+
+.prev,
+.next {cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;}
+
+.next {right: 0;
+  border-radius: 3px 0 0 3px;}
+
+.prev:hover,
+.next:hover {background-color: #2B5136;}
+
+.numbertext {color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;}
+
+.caption-container {text-align: center;
+  background-color: #2B5136;
+  padding: 2px 16px;
+  color: white;}
+
+.row:after {content: "";
+  display: table;
+  clear: both;}
+
+.column {float: left;
+  width: 16.66%;}
+
+.demo {opacity: 0.6;}
+
+.active,
+.demo:hover {opacity: 1;}
+
+img.para {float:right;
+    max-width:60%;
+    height:auto;
+    max-height:300px;}
+
+p.osa1 {min-height: 250px;}
+
+a:link {color: white;
+    background-color: transparent;
+    text-decoration: none;}
+
+a:visited {color: white;
+    background-color: transparent;
+    text-decoration: none;}
+
+a:hover {color: white;
+    background-color: transparent;
+    text-decoration: underline;}
+
+a:active {color: white;
+    background-color: transparent;
+    text-decoration: underline;}
+
+body {font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;background-color: #C9F9D7;}
+
+header {background-color: #3A9B55;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;}
+
+section {display: -webkit-flex;
+    display: flex;}
+
+nav {-webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #2B5136;
+    padding: 10px;}
+
+h1 {margin: 0;}
+h2 {margin: 0;}
+
+section::after {content: "";display: table;clear: both;}
+
+iframe {border: 5px;
+    border-style: solid;
+    border-color: #564655;}
+
+nav ul {list-style-type: none;
+    padding: 0;}
+
+article {-webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #C9F9D7;
+    padding: 10px;
+    color: #3A9B55;}
+
+footer {background-color: #3A9B55;
+    padding: 10px;
+    text-align: center;
+    color: white;}
+
+@media (max-width: 600px) {
+  section {-webkit-flex-direction: column;
+    flex-direction: column;}}
+
+.parent {
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+.child {
+  display: inline-block;
+  border: 1px solid #2B5136;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Frogito</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="Pääsivu.html">Home page</a></li>
+      <li><a href="vaatteet.html">Clothes</a></li>
+      <li><a href="korut.html">Jewelry</a></li>
+      <li><a href="yhteystiedot.html">Contact info</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <br>
+    <div class="container">
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <span>
+          hi
+        </span>
+          <img src="dog_froogdie.jpg" style="max-width:80%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <span>
+          hi
+        </span>
+          <img src="earfrongs.png" style="max-width:80%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <span>
+          hi
+        </span>
+          <img src="fregeshoes.png" style="max-width:80%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <span>
+          hi
+        </span>
+          <img src="frogging_pin.jpg" style="max-width:80%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <span>
+          hi
+        </span>
+          <img src="frogloves.jpg" style="max-width:80%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <span>
+          hi
+        </span>
+          <img src="froget_hat.jpg" style="max-width:85%;height:auto;max-height:300px;">
+      </div>
+    
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="dog_froogdie.jpg" style="max-width:70%;height:auto;max-height:400px;" onclick="currentSlide(1)" alt="Dog Froogdie">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="earfrongs.png" style="max-width:70%;height:auto;max-height:400px;" onclick="currentSlide(2)" alt="Earfrongs">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="fregeshoes.png" style="max-width:70%;height:auto;max-height:400px;" onclick="currentSlide(3)" alt="Fregeshoes">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="frogging_pin.jpg" style="max-width:70%;height:auto;max-height:400px;" onclick="currentSlide(4)" alt="Frogging Pin">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="frogloves.jpg" style="max-width:70%;height:auto;max-height:400px;" onclick="currentSlide(5)" alt="Frogloves">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="froget_hat.jpg" style="max-width:70%;height:auto;max-height:400px;" onclick="currentSlide(6)" alt="Froget Hat">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class='parent'>
+      <h2 style="text-align:center;">Love for Frogito</h2>
+      <br>
+      <div class="child"><img src="https://static.vecteezy.com/system/resources/previews/009/663/927/non_2x/5-star-rating-review-star-transparent-free-png.png" alt="5 stars" style="width:100px;height:70px; padding:0px">
+      <h3>Five Stars for Quality!</h3>
+      <span>"No other brand pays closer attention to quality, fabric, and timeless style. I'm a fan!"</span>
+      <p>- Amanda F.</p></div>
+      <br>
+      <div class="child"><img src="https://static.vecteezy.com/system/resources/previews/009/663/927/non_2x/5-star-rating-review-star-transparent-free-png.png" alt="5 stars" style="width:100px;height:70px; padding:0px">
+      <h3>The Only Brand I Trust</h3>
+      <span>"I have sensitive skin, and so far only Frogito clothes suit me." </span>
+      <p>- Nancy K.</p></div>
+      <br>
+      <div class="child"><img src="https://static.vecteezy.com/system/resources/previews/009/663/927/non_2x/5-star-rating-review-star-transparent-free-png.png" alt="5 stars" style="width:100px;height:70px; padding:0px">
+      <h3>My Kids Love It</h3>
+      <span>"We've been using this brand for years. They're truly clothes that kids can grow up in!"</span>
+      <p>- David S.</p></div>
+    </div>
+    <br>
+    <h2 style="text-align:center;">Who We Are</h2>
+    <p>Frogito offers a well-curated range of fashion items for men and women.</p>
+    <p>We aim to provide an enjoyable shopping experience for all our customers.</p>
+    <br>
+    <h2 style="text-align:center;">Crafted with Kindness</h2>
+    
+    <h3>Organic + Hypoallergenic</h3>
+    <p>Our thread and fabric are sourced from cotton partners with the strictest standards.</p>
+    
+    <h3>Hand-Finished</h3>
+    <p>Each item of clothing is finished by the hands of experienced dressmakers and jewellery makers.</p>
+    
+    <h3>Sustainable</h3>
+    <p>From logistics to packaging, we practice a zero-waste product cycle.</p>
+    <br>
+  </article>
+</section>
+
+<footer>
+  <p>Frogito</p>
+</footer>
+
+</body>
+</html>
