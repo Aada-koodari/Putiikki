@@ -10,7 +10,6 @@
 
 .container {position: relative;}
 
-.mySlides {display: none;}
 
 .cursor {cursor: pointer;}
 
@@ -18,48 +17,27 @@
 div.desc {
   padding: 3px;
   text-align: left;
+  background: #fff;
 }
 
-.prev,
-.next {cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;}
+.righto {
+  float: right;
+}
 
-.next {right: 0;
-  border-radius: 3px 0 0 3px;}
-
-.prev:hover,
-.next:hover {background-color: #2B5136;}
-
-.numbertext {color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;}
-
-.caption-container {text-align: center;
-  background-color: #2B5136;
-  padding: 2px 16px;
-  color: white;}
 
 .row:after {content: "";
+  padding: 5px;
   display: table;
-  clear: both;}
+  clear: both;
+}
 
 .column {float: left;
-  width: 16.66%;}
+  padding-right: 5px;
+  width: 16.66%;
+  /* border: 1px solid #564655 */
+}
 
 .demo {opacity: 0.6;}
-
 .active,
 .demo:hover {opacity: 1;}
 
@@ -68,7 +46,7 @@ img.para {float:right;
     height:auto;
     max-height:300px;}
 
-p.osa1 {min-height: 250px;}
+/* TEKSTI CSS*/
 
 a:link {color: white;
     background-color: transparent;
@@ -101,7 +79,7 @@ nav {-webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     background: #2B5136;
-    padding: 20px;
+    padding: 10px;
     color:#C9F9D7;}
 
 h1 {margin: 5;}
@@ -154,107 +132,44 @@ footer {background-color: #3A9B55;
     
     <form>
       <input type="radio" id="html" name="fav_language" value="Mini ature">
-      <label for="html"><a href="https://en.wikipedia.org/wiki/Mini_ature">Mini ature</a></label><br>
+      <label for="html"><a href="https://en.wikipedia.org/wiki/Mini_ature" target="_blank">Mini ature</a></label><br>
       <input type="radio" id="css" name="fav_language" value="Mini scule">
-      <label for="css"><a href="https://en.wikipedia.org/wiki/Mini_mum">Mini mum</a></label><br>
+      <label for="css"><a href="https://en.wikipedia.org/wiki/Mini_mum" target="_blank">Mini mum</a></label><br>
       <input type="radio" id="javascript" name="fav_language" value="Mini mum">
-      <label for="javascript"><a href="https://en.wikipedia.org/wiki/Mini_scule">Mini scule</a></label>
+      <label for="javascript"><a href="https://en.wikipedia.org/wiki/Mini_scule" target="_blank">Mini scule</a></label>
     </form> 
     <p><img src="../frog/minimum.jpg" width="100" height="auto"></p>
   </nav>
   
+
   <article>
-    <h1>Frog jewelry</h1>
-    <!-- <div class="container">
-
-      <div class="mySlides">
-        <div class="numbertext">1 / 10</div>
-          <img src="frog/earfrongs.png" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
+    <h1></h1>
     
-      <div class="mySlides">
-        <div class="numbertext">2 / 10</div>
-          <img src="frog/frogging_pin.jpg" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">3 / 10</div>
-          <img src="frog/froging.jpg" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">4 /10</div>
-          <img src="frog/frogring2.jpg" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">FROG. IS. YOUR. KING</div>
-          <img src="frog/frogring3.webp" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">6 / 6</div>
-          <img src="frog/frogring4.jpg" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">7 / 10</div>
-          <img src="frog/frogring5.jpg" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-      
-      <div class="mySlides">
-        <div class="numbertext">8 / 10</div>
-          <img src="frog/frogearring2.webp" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">9 / 10</div>
-          <img src="frog/fromg_love_pin.png" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">10 / 10</div>
-          <img src="frog/frogearring.PNG" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">Marry me. </div>
-          <img src="frog/frogmarried.webp" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    -->
-
-      <div class="caption-container">
-        <p id="caption"></p>
-      </div>
-    
+<!-- TUOTTEET -->
       <div class="row">
         <div class="column">
           <a href="../frog/earfrongs.png" target="_blank">
-          <img class="demo cursor" src="../frog/earfrongs.png" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(1)" alt="Frog">
-          <div class="desc">Frogs (2)</div>
+          <img class="demo cursor" src="../frog/earfrongs.png" style="max-width:100%;height:auto;max-height:300px;"  alt="Frog">
           </a>
+          <div class="desc">Frogs (2)<div class="righto">100¥</div></div>
         </div>
-        
         <div class="column">
-          <a href="../frog/frogging_pin.jpg" target="_blank">
-          <img class="demo cursor" src="../frog/frogging_pin.jpg" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(2)" alt="Frog">
+          <a href="../frog/frogmarried.jpg" target="_blank">
+            <img class="demo cursor" src="../frog/frogmarried.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="You are the Froge to my doge">
           </a>
-          <div class="desc">Frog (1)</div>
-        </div>
+            <div class="desc">Frog Marriage (1)<div class="righto">100¥</div></div>
+          </div>
         <div class="column">
           <a href="../frog/froging.jpg" target="_blank">
-          <img class="demo cursor" src="../frog/froging.jpg" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(3)" alt="Frog">
+          <img class="demo cursor" src="../frog/froging.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="Frog">
           </a>
-          <div class="desc">Frog (1)</div>
+          <div class="desc">Frog (1)<div class="righto">100¥</div></div>
         </div>
         <div class="column">
           <a href="../frog/frogring2.jpg" target="_blank">
-          <img class="demo cursor" src="../frog/frogring2.jpg" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(4)" alt="Frog">
+          <img class="demo cursor" src="../frog/frogring2.jpg" style="max-width:100%;height:auto;max-height:300px;"  alt="Frog">
           </a>
-          <div class="desc">Frog (1)</div>
+          <div class="desc">Frog (1)<div class="righto">100¥</div></div>
         </div>
         
     
@@ -264,58 +179,55 @@ footer {background-color: #3A9B55;
         
 
         <div class="column">
-          <a href="../frog/frogring3.webp" target="_blank">
-            <img class="demo cursor" src="../frog/frogring3.webp" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(5)" alt="Frogs">
+          <a href="../frog/frogring3.jpg" target="_blank">
+            <img class="demo cursor" src="../frog/frogring3.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="Frogs">
           </a>
-            <div class="desc">Frog King (1)</div>
+            <div class="desc">Frog King (1)<div class="righto">100¥</div></div>
           </div>
 
         <div class="column">
           <a href="../frog/frogring4.jpg" target="_blank">
-          <img class="demo cursor" src="../frog/frogring4.jpg" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(6)" alt="Frogt">
+          <img class="demo cursor" src="../frog/frogring4.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="Frogt">
           </a>
-          <div class="desc">Frog Queen (1)</div>
+          <div class="desc">Frog Queen (1)<div class="righto">100¥</div></div>
         </div>
 
         <div class="column">
           <a href="../frog/frogring5.jpg" target="_blank">
-            <img class="demo cursor" src="../frog/frogring5.jpg" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(7)" alt="Frog">
+            <img class="demo cursor" src="../frog/frogring5.jpg" style="max-width:100%;height:auto;max-height:300px;"  alt="Frog">
           </a>
-            <div class="desc">Frog King (1)</div>
+            <div class="desc">Frog King (1)<div class="righto">100¥</div></div>
           </div>
 
          <div class="column">
-          <a href="../frog/frogearring2.webp" target="_blank">
-            <img class="demo cursor" src="../frog/frogearring2.webp" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(8)" alt="Froog">
+          <a href="../frog/frogearring2.jpg" target="_blank">
+            <img class="demo cursor" src="../frog/frogearring2.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="Froog">
           </a>
-            <div class="desc">Frogs (2)</div>
+            <div class="desc">Frogs (2)<div class="righto">100¥</div></div>
           </div>
 
       </div>
 
       <div class="row">
         
-
-        
          <div class="column">
           <a href="../frog/fromg_love_pin.png" target="_blank">
-            <img class="demo cursor" src="../frog/fromg_love_pin.png" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(9)" alt="Froge">
+            <img class="demo cursor" src="../frog/fromg_love_pin.png" style="max-width:100%;height:auto;max-height:300px;" alt="Froge">
             </a>
-            <div class="desc">Man. I love Frogs (?)</div>
+            <div class="desc">Man. I love Frogs (?)<div class="righto">100¥</div></div>
           </div>
 
          <div class="column">
           <a href="../frog/frogearring.PNG" target="_blank">
-            <img class="demo cursor" src="../frog/frogearring.PNG" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(10)" alt="Frög">
+            <img class="demo cursor" src="../frog/frogearring.PNG" style="max-width:100%;height:auto;max-height:300px;" alt="Frög">
           </a>
-            <div class="desc">Frogs (2)</div>
+            <div class="desc">Frogs (2)<div class="righto">100¥</div></div>
           </div>
-
-         <div class="column">
-          <a href="../frog/frogmarried.webp" target="_blank">
-            <img class="demo cursor" src="../frog/frogmarried.webp" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(11)" alt="You are the Froge to my doge">
-          </a>
-            <div class="desc">Frog Marriage (1)</div>
+          <div class="column">
+            <a href="../frog/frogging_pin.jpg" target="_blank">
+            <img class="demo cursor" src="../frog/frogging_pin.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="Frog">
+            </a>
+            <div class="desc">Frog (1)<div class="righto">100¥</div></div>
           </div>
 
       </div>
