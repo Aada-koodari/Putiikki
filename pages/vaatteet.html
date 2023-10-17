@@ -10,7 +10,6 @@
 
 .container {position: relative;}
 
-.mySlides {display: none;}
 
 .cursor {cursor: pointer;}
 
@@ -18,48 +17,25 @@
 div.desc {
   padding: 3px;
   text-align: left;
+  background: #fff;
 }
 
-.prev,
-.next {cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;}
-
-.next {right: 0;
-  border-radius: 3px 0 0 3px;}
-
-.prev:hover,
-.next:hover {background-color: #2B5136;}
-
-.numbertext {color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;}
-
-.caption-container {text-align: center;
-  background-color: #2B5136;
-  padding: 2px 16px;
-  color: white;}
+.righto {
+  float: right;
+}
 
 .row:after {content: "";
+  padding: 5px;
   display: table;
-  clear: both;}
+  clear: both;
+}
 
 .column {float: left;
-  width: 16.66%;}
+  padding-right: 5px;
+  width: 16.66%;
+}
 
 .demo {opacity: 0.6;}
-
 .active,
 .demo:hover {opacity: 1;}
 
@@ -68,7 +44,8 @@ img.para {float:right;
     height:auto;
     max-height:300px;}
 
-p.osa1 {min-height: 250px;}
+
+/* TEKSTI CSS*/
 
 a:link {color: white;
     background-color: transparent;
@@ -132,8 +109,8 @@ footer {background-color: #3A9B55;
     flex-direction: column;}}
 </style>
 </head>
-<body>
 
+<body>
 <header>
   <h2>Frogito</h2>
 </header>
@@ -149,100 +126,34 @@ footer {background-color: #3A9B55;
   </nav>
   
   <article>
-    <h1>Frog apparel</h1>
+    <h1></h1>
+    
 
-    <!-- <div class="container">
-    
-      <div class="mySlides">
-        <div class="numbertext">1 / 10</div>
-        <img src="frog/dog_froogdie.jpg" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">2 / 10</div>
-        <img src="frog/froncho.jpg" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">3 / 10</div>
-        <img src="frog/frogbag_2.webp" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">4 /10</div>
-        <img src="frog/fregeshoes.png" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">5 / 10</div>
-        <img src="frog/frogloves.jpg" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">6 / 6</div>
-        <img src="frog/froget_hat.jpg" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">7 / 10</div>
-        <img src="frog/frogveralls.webp" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">8 / 10</div>
-        <img src="frog/froots.jpg" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">9 / 10</div>
-        <img src="frog/froghoodie.jpg" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">10 / 10</div>
-        <img src="frog/frogbag_1.webp" style="max-width:60%;height:auto;max-height:300px;">
-      </div>
-    
-      <div class="mySlides">
-        <div class="numbertext">11 / 10</div>
-        <img src="frog/frogscarf.webp" style="max-width:60%;height:auto;max-height:300px;">
-      </div> 
-
-
-
-    
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
--->
-
-      <div class="caption-container">
-        <p id="caption"></p>
-      </div>
-    
+<!-- TUOTTEET -->
       <div class="row">
         <div class="column">
           <a href="../frog/dog_froogdie.jpg" target="_blank">
-            <img class="demo cursor" src="../frog/dog_froogdie.jpg" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(1)" alt="Dog Froogdie">
+            <img class="demo cursor" src="../frog/dog_froogdie.jpg" style="max-width:100%;height:auto;max-height:400px;" alt="Dog Froogdie">
           </a>
-            <div class="desc">Froogdie (dawg)</div>
+            <div class="desc">Froogdie (dawg)<div class="righto">100¥</div></div>
         </div>
         <div class="column">
           <a href="../frog/froncho.jpg" target="_blank">
-          <img class="demo cursor" src="../frog/froncho.jpg" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(2)" alt="Earfrongs">
+          <img class="demo cursor" src="../frog/froncho.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="Earfrongs">
           </a>
-          <div class="desc">Froncho</div>
+          <div class="desc">Froncho<div class="righto">100¥</div></div>
         </div>
         <div class="column">
           <a href="../frog/frogbag_2.webp" target="_blank">
-          <img class="demo cursor" src="../frog/frogbag_2.webp" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(3)" alt="Frogbag">
+          <img class="demo cursor" src="../frog/frogbag_2.webp" style="max-width:100%;height:auto;max-height:300px;" alt="Frogbag">
           </a>
-          <div class="desc">Frogbag Z</div>
+          <div class="desc">Frogbag Z<div class="righto">100¥</div></div>
         </div>
         <div class="column">
           <a href="../frog/fregeshoes.png" target="_blank">
-          <img class="demo cursor" src="../frog/fregeshoes.png" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(4)" alt="Frogging Pin">
+          <img class="demo cursor" src="../frog/fregeshoes.png" style="max-width:100%;height:auto;max-height:300px;" alt="Frogging Pin">
           </a>
-          <div class="desc">Fregeshoes</div>
+          <div class="desc">Fregeshoes<div class="righto">100¥</div></div>
         </div>
         
     
@@ -253,30 +164,30 @@ footer {background-color: #3A9B55;
 
         <div class="column">
           <a href="../frog/frogloves.jpg" target="_blank">
-            <img class="demo cursor" src="../frog/frogloves.jpg" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(5)" alt="Frogloves">
+            <img class="demo cursor" src="../frog/frogloves.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="Frogloves">
           </a>
-            <div class="desc">Frogloves</div>
+            <div class="desc">Frogloves<div class="righto">100¥</div></div>
           </div>
 
         <div class="column">
           <a href="../frog/froget_hat.jpg" target="_blank">
-          <img class="demo cursor" src="../frog/froget_hat.jpg" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(6)" alt="Froget Hat">
+          <img class="demo cursor" src="../frog/froget_hat.jpg" style="max-width:100%;height:auto;max-height:300px;"  alt="Froget Hat">
           </a>
-          <div class="desc">Froget hat</div>
+          <div class="desc">Froget hat<div class="righto">100¥</div></div>
         </div>
 
         <div class="column">
-          <a href="../frog/frogveralls.webp" target="_blank">
-            <img class="demo cursor" src="../frog/frogveralls.webp" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(7)" alt="Froveralls">
-          </a>
-            <div class="desc">Frogoveralls</div>
+          <a href="../frog/frogbag_1.webp" target="_blank">
+            <img class="demo cursor" src="../frog/frogbag_1.webp" style="max-width:100%;height:auto;max-height:300px;"  alt="Frogbag">
+            </a>
+            <div class="desc">Frogbag X<div class="righto">100¥</div></div>
           </div>
 
          <div class="column">
           <a href="../frog/froots.jpg" target="_blank">
-            <img class="demo cursor" src="../frog/froots.jpg" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(8)" alt="Froots">
+            <img class="demo cursor" src="../frog/froots.jpg" style="max-width:100%;height:auto;max-height:300px;"  alt="Froots">
           </a>
-            <div class="desc">Froots</div>
+            <div class="desc">Froots<div class="righto">100¥</div></div>
           </div>
 
       </div>
@@ -287,23 +198,25 @@ footer {background-color: #3A9B55;
         
          <div class="column">
           <a href="../frog/froghoodie.jpg" target="_blank">
-            <img class="demo cursor" src="../frog/froghoodie.jpg" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(9)" alt="Froghoodie">
+            <img class="demo cursor" src="../frog/froghoodie.jpg" style="max-width:100%;height:auto;max-height:300px;"  alt="Froghoodie">
           </a>
-            <div class="desc">Frogoodie</div>
+            <div class="desc">Frogoodie<div class="righto">100¥</div></div>
           </div>
 
-         <div class="column">
-          <a href="../frog/frogbag_1.webp" target="_blank">
-            <img class="demo cursor" src="../frog/frogbag_1.webp" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(10)" alt="Frogbag">
+      
+
+          <div class="column">
+            <a href="../frog/frogveralls.webp" target="_blank">
+              <img class="demo cursor" src="../frog/frogveralls.webp" style="max-width:100%;height:auto;max-height:300px;" alt="Froveralls">
             </a>
-            <div class="desc">Frogbag X</div>
-          </div>
+              <div class="desc">Frogoveralls<div class="righto">100¥</div></div>
+            </div>
 
          <div class="column">
           <a href="../frog/frogscarf.webp" target="_blank">
-            <img class="demo cursor" src="../frog/frogscarf.webp" style="max-width:60%;height:auto;max-height:300px;" onclick="currentSlide(11)" alt="Frogbag">
+            <img class="demo cursor" src="../frog/frogscarf.webp" style="max-width:100%;height:auto;max-height:300px;"  alt="Frogbag">
           </a>
-            <div class="desc">Frogrfe</div>
+            <div class="desc">Frogrfe<div class="righto">100¥</div></div>
           </div>
 
       </div>
