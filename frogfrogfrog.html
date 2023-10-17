@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="javascript.js"></script>
+<title>Frogito</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+.container {position: relative;}
+
+.mySlides {display: none;}
+
+.cursor {cursor: pointer;}
+
+.prev,
+.next {cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;}
+
+.next {right: 0;
+  border-radius: 3px 0 0 3px;}
+
+.prev:hover,
+.next:hover {background-color: #2B5136;}
+
+.numbertext {color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;}
+
+.caption-container {text-align: center;
+  background-color: #2B5136;
+  padding: 2px 16px;
+  color: white;}
+
+.row:after {content: "";
+  display: table;
+  clear: both;}
+
+.column {float: left;
+  width: 16.66%;}
+
+.demo {opacity: 0.6;}
+
+.active,
+.demo:hover {opacity: 1;}
+
+img.para {float:right;
+    max-width:60%;
+    height:auto;
+    max-height:300px;}
+
+p.osa1 {min-height: 250px;}
+
+a:link {color: white;
+    background-color: transparent;
+    text-decoration: none;}
+
+a:visited {color: white;
+    background-color: transparent;
+    text-decoration: none;}
+
+a:hover {color: white;
+    background-color: transparent;
+    text-decoration: underline;}
+
+a:active {color: white;
+    background-color: transparent;
+    text-decoration: underline;}
+
+body {font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;background-color: #C9F9D7;}
+
+header {background-color: #3A9B55;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;}
+
+section {display: -webkit-flex;
+    display: flex;}
+
+nav {-webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #2B5136;
+    padding: 20px;}
+
+h1 {margin: 5;}
+h2 {margin: 0;}
+
+section::after {content: "";display: table;clear: both;}
+
+iframe {border: 5px;
+    border-style: solid;
+    border-color: #564655;}
+
+nav ul {list-style-type: none;
+    padding: 0;}
+
+article {-webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #C9F9D7;
+    padding: 10px;
+    color: #3A9B55;}
+
+footer {background-color: #3A9B55;
+    padding: 10px;
+    text-align: center;
+    color: white;}
+
+@media (max-width: 600px) {
+  section {-webkit-flex-direction: column;
+    flex-direction: column;}}
+
+    div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Frogito</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="file:///C:/Users/Oppilas1/OneDrive%20-%20Koulutuskeskus%20Salpaus/Teht%C3%A4v%C3%A4t/Putiikki/P%C3%A4%C3%A4sivu.html">Home page</a></li>
+      <li><a href="file:///C:/Users/Aada/Downloads/v%C3%A4lisivu%20(3).html">Clothes</a></li>
+      <li><a href="#">Jewelry</a></li>
+      <li><a href="file:///C:/Users/Aada/Downloads/yhteystiedot.html">Contact info</a></li>
+    </ul>
+  </nav>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="frog/frogsticker1.png">
+        <img src="frog/frogsticker1.png" alt="Northern Lights" width="600" height="400">
+      </a>
+      <div class="desc">sticker 1</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="frog/frogsticker2.png">
+        <img src="frog/frogsticker2.png" alt="Cinque Terre" width="600" height="400">
+      </a>
+      <div class="desc">sticker 2</div>
+    </div>
+  </div>
+  
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="frog/frogsticker3.png">
+        <img src="frog/frogsticker3.png" alt="Forest" width="600" height="400">
+      </a>
+      <div class="desc">sticker 3</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="frog/frogsticker4.png">
+        <img src="frog/frogsticker4.png" alt="Northern Lights" width="600" height="400">
+      </a>
+      <div class="desc">sticker 4</div>
+    </div>
+  </div>
+
+    
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="frog/frogsticker5.png">
+        <img src="frog/frogsticker5.png" alt="Forest" width="600" height="400">
+      </a>
+      <div class="desc">sticker 5</div>
+    </div>
+  </div>
+  
+  <div class="clearfix"></div>
+</section>
+
+<footer>
+  <p>Frooooooooooooooooooooooooooooooooooog</p>
+</footer>
+
+</body>
+</html>
