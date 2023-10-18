@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="javascript.js"></script>
+<title>Frogito</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+.container {position: relative;}
+
+.mySlides {display: none;}
+
+.cursor {cursor: pointer;}
+
+/* Add desc */
+div.desc {
+  padding: 3px;
+  text-align: left;
+}
+
+.prev,
+.next {cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;}
+
+.next {right: 0;
+  border-radius: 3px 0 0 3px;}
+
+.prev:hover,
+.next:hover {background-color: #2B5136;}
+
+.numbertext {color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;}
+
+.caption-container {text-align: center;
+  background-color: #2B5136;
+  padding: 2px 16px;
+  color: white;}
+
+.row:after {content: "";
+  display: table;
+  clear: both;}
+
+.column {float: left;
+  width: 16.66%;}
+
+.demo {opacity: 1;}
+
+.active,
+.demo:hover {opacity: 1;}
+
+img.para {float:right;
+    max-width:60%;
+    height:auto;
+    max-height:300px;}
+
+p.osa1 {min-height: 250px;}
+
+a:link {color: white;
+    background-color: transparent;
+    text-decoration: none;}
+
+a:visited {color: white;
+    background-color: transparent;
+    text-decoration: none;}
+
+a:hover {color: white;
+    background-color: transparent;
+    text-decoration: underline;}
+
+a:active {color: white;
+    background-color: transparent;
+    text-decoration: underline;}
+
+body {font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;background-color: #C9F9D7;}
+
+header {background-color: #3A9B55;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;}
+
+section {display: -webkit-flex;
+    display: flex;}
+
+nav {-webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #2B5136;
+    padding: 20px;}
+
+h1 {margin: 5;}
+h2 {margin: 0;}
+
+section::after {content: "";display: table;clear: both;}
+
+iframe {border: 5px;
+    border-style: solid;
+    border-color: #564655;}
+
+nav ul {list-style-type: none;
+    padding: 0;}
+
+article {-webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #C9F9D7;
+    padding: 10px;
+    color: #3A9B55;}
+
+footer {background-color: #3A9B55;
+    padding: 10px;
+    text-align: center;
+    color: white;}
+
+@media (max-width: 600px) {
+  section {-webkit-flex-direction: column;
+    flex-direction: column;}}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Frogito</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="Pääsivu.html">Home page</a></li>
+      <li><a href="vaatteet.html">Apparel</a></li>
+      <li><a href="korut.html">Jewellery</a></li>
+      <li><a href="yhteystiedot.html">Contact info</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Frog Funnies</h1>
+
+    <!-- <div class="container">
+    
+      <div class="mySlides">
+        <div class="numbertext">1 / 10</div>
+        <img src="frog/dog_froogdie.jpg" style="max-width:60%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">2 / 10</div>
+        <img src="frog/froncho.jpg" style="max-width:60%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">3 / 10</div>
+        <img src="frog/frogbag_2.webp" style="max-width:60%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">4 /10</div>
+        <img src="frog/fregeshoes.png" style="max-width:60%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">5 / 10</div>
+        <img src="frog/frogloves.jpg" style="max-width:60%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="frog/froget_hat.jpg" style="max-width:60%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">7 / 10</div>
+        <img src="frog/frogveralls.webp" style="max-width:60%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">8 / 10</div>
+        <img src="frog/froots.jpg" style="max-width:60%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">9 / 10</div>
+        <img src="frog/froghoodie.jpg" style="max-width:60%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">10 / 10</div>
+        <img src="frog/frogbag_1.webp" style="max-width:60%;height:auto;max-height:300px;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">11 / 10</div>
+        <img src="frog/frogscarf.webp" style="max-width:60%;height:auto;max-height:300px;">
+      </div> 
+
+
+
+    
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+-->
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="frog memes/a.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(1)" alt="a">
+          <div class="desc">a 0.02€</div>
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="frog memes/idiot.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(2)" alt="Idiot">
+          <div class="desc">Idiot 39.99€</div>
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="frog memes/stack.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(3)" alt="Stack">
+          <div class="desc">Stack 3.49€</div>
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="frog memes/sini.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(4)" alt="Slaying">
+          <div class="desc">Slaying 9.99€</div>
+        </div>
+        
+    
+      </div>
+
+      <div class="row">
+        
+
+        <div class="column">
+            <img class="demo cursor" src="frog memes/agressive.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(5)" alt="Lamp">
+            <div class="desc">Lamp 144.99€</div>
+          </div>
+
+        <div class="column">
+          <img class="demo cursor" src="frog memes/frog.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(6)" alt="Glass frog">
+          <div class="desc">Glass frog 899.99€</div>
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="frog memes/kneecaps.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(11)" alt="Kneecaps">
+          <div class="desc">Kneecaps 99.99€</div>
+        </div>
+
+         <div class="column">
+            <img class="demo cursor" src="frog memes/aaaaaaaaa.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(8)" alt="Aaaaaaaa">
+            <div class="desc">Aaaaaaaa 7.99.€</div>
+          </div>
+
+      </div>
+
+      <div class="row">
+        
+
+        
+         <div class="column">
+            <img class="demo cursor" src="frog memes/BEANs.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(9)" alt="Politics">
+            <div class="desc">Politics $69.99</div>
+          </div>
+
+         <div class="column">
+            <img class="demo cursor" src="frog memes/chris.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(10)" alt="Chris">
+            <div class="desc">Chris $5.99</div>
+          </div>
+
+         <div class="column">
+            <img class="demo cursor" src="frog memes/grapes.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(11)" alt="Frog">
+            <div class="desc">Frog 8.49€</div>
+          </div>
+
+          <div class="column">
+            <img class="demo cursor" src="frog memes/huh.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(11)" alt="Huh?">
+            <div class="desc">Huh? 29.99€</div>
+          </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="row">
+      
+
+      
+       <div class="column">
+          <img class="demo cursor" src="frog memes/harold.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(9)" alt="Harold">
+          <div class="desc">Harold $99.89</div>
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="frog memes/froghappy.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(7)" alt="Questions">
+          <div class="desc">Questions 0.60€</div>
+        </div>
+
+        <div class="column">
+          <img class="demo cursor" src="frog memes/very safe.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(10)" alt="Very safe!">
+          <div class="desc">Very safe! 0.01€</div>
+        </div>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    
+
+    
+     <div class="column">
+        <img class="demo cursor" src="frog memes/weapon.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(9)" alt="Weapon">
+        <div class="desc">Weapon $249.99</div>
+      </div>
+
+
+      <div class="column">
+        <img class="demo cursor" src="frog memes/milf.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(11)" alt="Milf">
+        <div class="desc">Milf 0.05€</div>
+      </div>
+
+     <div class="column">
+        <img class="demo cursor" src="frog memes/frogs.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(11)" alt="Frogs not jesus!">
+        <div class="desc">Frogs not jesus! 94.99€</div>
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="frog memes/frög.jpg" style="max-width:95%;height:auto;max-height:300px;" onclick="currentSlide(10)" alt="Frög">
+        <div class="desc">Frög 8.39€</div>
+      </div>
+
+  </div>
+
+
+
+    </div>
+  </article>
+</section>
+
+<footer>
+  <p>© 2023, Frogito Oy. Powered by Coffee</p>
+</footer>
+
+</body>
+</html>
