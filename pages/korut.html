@@ -1,250 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<script src="../js/javascript.js"></script>
-<title>Frogito</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box;}
+  <head>
+    <script src="../js/javascript.js"></script>
+    <title>Frogito</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-.container {position: relative;}
+      .container {
+        position: relative;
+      }
 
+      .cursor {
+        cursor: pointer;
+      }
 
-.cursor {cursor: pointer;}
+      /* Add desc */
+      div.desc {
+        padding: 3px;
+        text-align: left;
+        background: #fff;
+      }
 
-/* Add desc */
-div.desc {
-  padding: 3px;
-  text-align: left;
-  background: #fff;
-}
+      .righto {
+        float: right;
+      }
 
-.righto {
-  float: right;
-}
+      .row:after {
+        content: "";
+        padding: 5px;
+        display: table;
+        clear: both;
+      }
 
+      .column {
+        float: left;
+        padding-right: 5px;
+        width: 16.66%;
+        /* border: 1px solid #564655 */
+      }
 
-.row:after {content: "";
-  padding: 5px;
-  display: table;
-  clear: both;
-}
+      .demo {
+        opacity: 0.6;
+      }
+      .active,
+      .demo:hover {
+        opacity: 1;
+      }
 
-.column {float: left;
-  padding-right: 5px;
-  width: 16.66%;
-  /* border: 1px solid #564655 */
-}
+      img.para {
+        float: right;
+        max-width: 60%;
+        height: auto;
+        max-height: 300px;
+      }
 
-.demo {opacity: 0.6;}
-.active,
-.demo:hover {opacity: 1;}
+      /* TEKSTI CSS*/
 
-img.para {float:right;
-    max-width:60%;
-    height:auto;
-    max-height:300px;}
+      a:link {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
 
-/* TEKSTI CSS*/
+      a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
 
-a:link {color: white;
-    background-color: transparent;
-    text-decoration: none;}
+      a:hover {
+        color: white;
+        background-color: transparent;
+        text-decoration: underline;
+      }
 
-a:visited {color: white;
-    background-color: transparent;
-    text-decoration: none;}
+      a:active {
+        color: white;
+        background-color: transparent;
+        text-decoration: underline;
+      }
 
-a:hover {color: white;
-    background-color: transparent;
-    text-decoration: underline;}
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        background-color: #c9f9d7;
+      }
 
-a:active {color: white;
-    background-color: transparent;
-    text-decoration: underline;}
+      header {
+        background-color: #3a9b55;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
 
-body {font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;background-color: #C9F9D7;}
+      section {
+        display: -webkit-flex;
+        display: flex;
+      }
 
-header {background-color: #3A9B55;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-    color: white;}
+      nav {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        background: #2b5136;
+        padding: 10px;
+        color: #c9f9d7;
+      }
 
-section {display: -webkit-flex;
-    display: flex;}
+      h1 {
+        margin: 5;
+      }
+      h2 {
+        margin: 0;
+      }
 
-nav {-webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    background: #2B5136;
-    padding: 10px;
-    color:#C9F9D7;}
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
 
-h1 {margin: 5;}
-h2 {margin: 0;}
+      iframe {
+        border: 5px;
+        border-style: solid;
+        border-color: #564655;
+      }
 
-section::after {content: "";display: table;clear: both;}
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
 
-iframe {border: 5px;
-    border-style: solid;
-    border-color: #564655;}
+      article {
+        -webkit-flex: 3;
+        -ms-flex: 3;
+        flex: 3;
+        background-color: #c9f9d7;
+        padding: 10px;
+        color: #3a9b55;
+      }
 
-nav ul {list-style-type: none;
-    padding: 0;}
+      footer {
+        background-color: #3a9b55;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
 
-article {-webkit-flex: 3;
-    -ms-flex: 3;
-    flex: 3;
-    background-color: #C9F9D7;
-    padding: 10px;
-    color: #3A9B55;}
+      @media (max-width: 600px) {
+        section {
+          -webkit-flex-direction: column;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Frogito</h2>
+    </header>
 
-footer {background-color: #3A9B55;
-    padding: 10px;
-    text-align: center;
-    color: white;}
+    <section>
+      <nav>
+        <ul>
+          <li><a href="../Index.html">Home page</a></li>
+          <li><a href="../pages/vaatteet.html">Apparel</a></li>
+          <li><a href="../pages/korut.html">Jewelry</a></li>
+          <li><a href="../pages/yhteystiedot.html">Contact info</a></li>
+        </ul>
 
-@media (max-width: 600px) {
-  section {-webkit-flex-direction: column;
-    flex-direction: column;}}
-</style>
-</head>
-<body>
+        <!-- Frongds -->
+        <p>
+          <a href="../pages/frogfrogfrog.html" target="_blank"
+            ><img src="../frog/miniscule.jpg" width="100" height="auto"
+          /></a>
+        </p>
+        <p>Choose your fighter:</p>
 
-<header>
-  <h2>Frogito</h2>
-</header>
+        <form>
+          <input
+            type="radio"
+            id="html"
+            name="fav_language"
+            value="Mini ature"
+          />
+          <label for="html"
+            ><a href="https://en.wikipedia.org/wiki/Mini_ature" target="_blank"
+              >Mini ature</a
+            ></label
+          ><br />
+          <input type="radio" id="css" name="fav_language" value="Mini scule" />
+          <label for="css"
+            ><a href="https://en.wikipedia.org/wiki/Mini_mum" target="_blank"
+              >Mini mum</a
+            ></label
+          ><br />
+          <input
+            type="radio"
+            id="javascript"
+            name="fav_language"
+            value="Mini mum"
+          />
+          <label for="javascript"
+            ><a href="https://en.wikipedia.org/wiki/Mini_scule" target="_blank"
+              >Mini scule</a
+            ></label
+          >
+        </form>
+        <p>
+          <a href="../pages/thefunnies.html" target="_blank"
+            ><img src="../frog/minimum.jpg" width="100" height="auto"
+          /></a>
+        </p>
+      </nav>
 
-<section>
-  <nav>
-    <ul>
-      <li><a href="../Index.html">Home page</a></li>
-      <li><a href="../pages/vaatteet.html">Apparel</a></li>
-      <li><a href="../pages/korut.html">Jewelry</a></li>
-      <li><a href="../pages/yhteystiedot.html">Contact info</a></li>
-    </ul>
+      <article>
+        <h1></h1>
 
-    <!-- Frongds -->
-    <p><a href="../pages/frogfrogfrog.html" target="_blank"><img src="../frog/miniscule.jpg" width="100" height="auto"></a></p>
-   <p>Choose your fighter:</p>
-    
-    <form>
-      <input type="radio" id="html" name="fav_language" value="Mini ature">
-      <label for="html"><a href="https://en.wikipedia.org/wiki/Mini_ature" target="_blank">Mini ature</a></label><br>
-      <input type="radio" id="css" name="fav_language" value="Mini scule">
-      <label for="css"><a href="https://en.wikipedia.org/wiki/Mini_mum" target="_blank">Mini mum</a></label><br>
-      <input type="radio" id="javascript" name="fav_language" value="Mini mum">
-      <label for="javascript"><a href="https://en.wikipedia.org/wiki/Mini_scule" target="_blank">Mini scule</a></label>
-    </form> 
-    <p><a href="../pages/thefunnies.html" target="_blank"><img src="../frog/minimum.jpg" width="100" height="auto"></a></p>
-  </nav>
-  
-
-  <article>
-    <h1></h1>
-    
-<!-- TUOTTEET -->
-      <div class="row">
-        <div class="column">
-          <a href="../frog/earfrongs.png" target="_blank">
-          <img class="demo cursor" src="../frog/earfrongs.png" style="max-width:100%;height:auto;max-height:300px;"  alt="Frog">
-          </a>
-          <div class="desc">Frogs (2)<div class="righto">100¥</div></div>
-        </div>
-        <div class="column">
-          <a href="../frog/frogmarried.jpg" target="_blank">
-            <img class="demo cursor" src="../frog/frogmarried.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="You are the Froge to my doge">
-          </a>
-            <div class="desc">Marriage<div class="righto">100¥</div></div>
-          </div>
-        <div class="column">
-          <a href="../frog/froging.jpg" target="_blank">
-          <img class="demo cursor" src="../frog/froging.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="Frog">
-          </a>
-          <div class="desc">Frog (1)<div class="righto">100¥</div></div>
-        </div>
-        <div class="column">
-          <a href="../frog/frogring2.jpg" target="_blank">
-          <img class="demo cursor" src="../frog/frogring2.jpg" style="max-width:100%;height:auto;max-height:300px;"  alt="Frog">
-          </a>
-          <div class="desc">Frog (1)<div class="righto">100¥</div></div>
-        </div>
-        
-    
-      </div>
-
-      <div class="row">
-        
-
-        <div class="column">
-          <a href="../frog/frogring3.jpg" target="_blank">
-            <img class="demo cursor" src="../frog/frogring3.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="Frogs">
-          </a>
-            <div class="desc">Frog King (1)<div class="righto">100¥</div></div>
-          </div>
-
-        <div class="column">
-          <a href="../frog/frogring4.jpg" target="_blank">
-          <img class="demo cursor" src="../frog/frogring4.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="Frogt">
-          </a>
-          <div class="desc">Frog Queen (1)<div class="righto">100¥</div></div>
-        </div>
-
-        <div class="column">
-          <a href="../frog/frogring5.jpg" target="_blank">
-            <img class="demo cursor" src="../frog/frogring5.jpg" style="max-width:100%;height:auto;max-height:300px;"  alt="Frog">
-          </a>
-            <div class="desc">Frog King (1)<div class="righto">100¥</div></div>
-          </div>
-
-         <div class="column">
-          <a href="../frog/frogearring2.jpg" target="_blank">
-            <img class="demo cursor" src="../frog/frogearring2.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="Froog">
-          </a>
-            <div class="desc">Frogs (2)<div class="righto">100¥</div></div>
-          </div>
-
-      </div>
-
-      <div class="row">
-        
-         <div class="column">
-          <a href="../frog/fromg_love_pin.png" target="_blank">
-            <img class="demo cursor" src="../frog/fromg_love_pin.png" style="max-width:100%;height:auto;max-height:300px;" alt="Froge">
+        <!-- TUOTTEET -->
+        <div class="row">
+          <div class="column">
+            <a href="../frog/earfrongs.png" target="_blank">
+              <img
+                class="demo cursor"
+                src="../frog/earfrongs.png"
+                style="max-width: 100%; height: auto; max-height: 300px"
+                alt="Frog"
+              />
             </a>
-            <div class="desc">(MILF)<div class="righto">100¥</div></div>
+            <div class="desc">
+              Frogs (2)
+              <div class="righto">100¥</div>
+            </div>
+          </div>
+          <div class="column">
+            <a href="../frog/frogmarried.jpg" target="_blank">
+              <img
+                class="demo cursor"
+                src="../frog/frogmarried.jpg"
+                style="max-width: 100%; height: auto; max-height: 300px"
+                alt="You are the Froge to my doge"
+              />
+            </a>
+            <div class="desc">
+              Marriage
+              <div class="righto">100¥</div>
+            </div>
+          </div>
+          <div class="column">
+            <a href="../frog/froging.jpg" target="_blank">
+              <img
+                class="demo cursor"
+                src="../frog/froging.jpg"
+                style="max-width: 100%; height: auto; max-height: 300px"
+                alt="Frog"
+              />
+            </a>
+            <div class="desc">
+              Frog (1)
+              <div class="righto">100¥</div>
+            </div>
+          </div>
+          <div class="column">
+            <a href="../frog/frogring2.jpg" target="_blank">
+              <img
+                class="demo cursor"
+                src="../frog/frogring2.jpg"
+                style="max-width: 100%; height: auto; max-height: 300px"
+                alt="Frog"
+              />
+            </a>
+            <div class="desc">
+              Frog (1)
+              <div class="righto">100¥</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <a href="../frog/frogring3.jpg" target="_blank">
+              <img
+                class="demo cursor"
+                src="../frog/frogring3.jpg"
+                style="max-width: 100%; height: auto; max-height: 300px"
+                alt="Frogs"
+              />
+            </a>
+            <div class="desc">
+              Frog King (1)
+              <div class="righto">100¥</div>
+            </div>
           </div>
 
-         <div class="column">
-          <a href="../frog/frogearring.PNG" target="_blank">
-            <img class="demo cursor" src="../frog/frogearring.PNG" style="max-width:100%;height:auto;max-height:300px;" alt="Frög">
-          </a>
-            <div class="desc">Frogs (2)<div class="righto">100¥</div></div>
+          <div class="column">
+            <a href="../frog/frogring4.jpg" target="_blank">
+              <img
+                class="demo cursor"
+                src="../frog/frogring4.jpg"
+                style="max-width: 100%; height: auto; max-height: 300px"
+                alt="Frogt"
+              />
+            </a>
+            <div class="desc">
+              Frog Queen (1)
+              <div class="righto">100¥</div>
+            </div>
+          </div>
+
+          <div class="column">
+            <a href="../frog/frogring5.jpg" target="_blank">
+              <img
+                class="demo cursor"
+                src="../frog/frogring5.jpg"
+                style="max-width: 100%; height: auto; max-height: 300px"
+                alt="Frog"
+              />
+            </a>
+            <div class="desc">
+              Frog King (1)
+              <div class="righto">100¥</div>
+            </div>
+          </div>
+
+          <div class="column">
+            <a href="../frog/frogearring2.jpg" target="_blank">
+              <img
+                class="demo cursor"
+                src="../frog/frogearring2.jpg"
+                style="max-width: 100%; height: auto; max-height: 300px"
+                alt="Froog"
+              />
+            </a>
+            <div class="desc">
+              Frogs (2)
+              <div class="righto">100¥</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <a href="../frog/fromg_love_pin.png" target="_blank">
+              <img
+                class="demo cursor"
+                src="../frog/fromg_love_pin.png"
+                style="max-width: 100%; height: auto; max-height: 300px"
+                alt="Froge"
+              />
+            </a>
+            <div class="desc">
+              (MILF)
+              <div class="righto">100¥</div>
+            </div>
+          </div>
+
+          <div class="column">
+            <a href="../frog/frogearring.PNG" target="_blank">
+              <img
+                class="demo cursor"
+                src="../frog/frogearring.PNG"
+                style="max-width: 100%; height: auto; max-height: 300px"
+                alt="Frög"
+              />
+            </a>
+            <div class="desc">
+              Frogs (2)
+              <div class="righto">100¥</div>
+            </div>
           </div>
           <div class="column">
             <a href="../frog/frogging_pin.jpg" target="_blank">
-            <img class="demo cursor" src="../frog/frogging_pin.jpg" style="max-width:100%;height:auto;max-height:300px;" alt="Frog">
+              <img
+                class="demo cursor"
+                src="../frog/frogging_pin.jpg"
+                style="max-width: 100%; height: auto; max-height: 300px"
+                alt="Frog"
+              />
             </a>
-            <div class="desc">Frog (1)<div class="righto">100¥</div></div>
+            <div class="desc">
+              Frog (1)
+              <div class="righto">100¥</div>
+            </div>
           </div>
+        </div>
+      </article>
+    </section>
 
-      </div>
-
-
-
-
-
-
-
-    </div>
-  </article>
-</section>
-
-<footer>
-  <p>© 2023, Frogito Oy. Powered by Coffee</p>
-</footer>
-
-</body>
+    <footer>
+      <p>© 2023, Frogito Oy. Powered by Coffee</p>
+    </footer>
+  </body>
 </html>
