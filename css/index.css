@@ -97,6 +97,10 @@ and (max-device-width : 1024px)
   .muu {
       display: none;
   }
+  .container {
+    position: relative;
+    max-width: 500px;
+  }
 }
 
   .column {
