@@ -21,6 +21,7 @@ and (max-device-width : 1024px)
   .container {
     position: relative;
     max-width: 500px;
+    float: none;
   }
 }
 
