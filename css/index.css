@@ -11,6 +11,7 @@
   .container {
     position: relative;
     max-width: 500px;
+    float: left;
   }
 
   .mySlides {
@@ -78,6 +79,10 @@ and (max-device-width : 1024px)
 { 
     .ipad {
         display: block;
+    }
+    .container {
+      position: relative;
+      max-width: 500px;
     }
 }
 
