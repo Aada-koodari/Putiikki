@@ -11,7 +11,18 @@
   .container {
     position: relative;
     max-width: 500px;
+    float: left;
   }
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  
+{
+  .container {
+    position: relative;
+    max-width: 500px;
+  }
+}
 
   .mySlides {
     display: none;
