@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .cursor {
+    cursor: pointer;
+  }
+
+  /* Add desc */
+  div.desc {
+    padding: 3px;
+    text-align: left;
+    background: #fff;
+  }
+
+  .righto {
+    float: right;
+  }
+
+  .row:after {
+    content: "";
+    padding: 5px;
+    display: table;
+    clear: both;
+  }
+
+  .column {
+    float: left;
+    padding-right: 5px;
+    width: 16.66%;
+    /* border: 1px solid #564655 */
+  }
+
+  .demo {
+    opacity: 0.6;
+  }
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  img.para {
+    float: right;
+    max-width: 60%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  /* TEKSTI CSS*/
+
+  a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  body {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    background-color: #c9f9d7;
+  }
+
+  header {
+    background-color: #3a9b55;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+
+  section {
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #2b5136;
+    padding: 10px;
+    color: #c9f9d7;
+  }
+
+  h1 {
+    margin: 5;
+  }
+  h2 {
+    margin: 0;
+  }
+
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  iframe {
+    border: 5px;
+    border-style: solid;
+    border-color: #564655;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #c9f9d7;
+    padding: 10px;
+    color: #3a9b55;
+  }
+
+  footer {
+    background-color: #3a9b55;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  @media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
