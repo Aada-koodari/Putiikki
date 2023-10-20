@@ -13,24 +13,8 @@
   /* Add desc */
   div.desc {
     padding: 3px;
-    text-align: center;
+    text-align: left;
     background: #fff;
-  }
-
-  div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-  }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  div.gallery img {
-    width: 100%;
-    height: auto;
   }
 
   .righto {
